@@ -14,21 +14,25 @@ const App = () => {
       </>
     );
   };
-  const Content = (props) => {
+
+  const Part = (props) => {
     return (
       <>
         <p>
-          Name of part: {props.part1} - Number of exercises:{" "}
-          {props.numberOfExercises1}{" "}
+          Name of part: {props.part} - Number of exercises:
+          {props.numberOfExercises}{" "}
         </p>
-        <p>
-          Name of part: {props.part2} - Number of exercises:{" "}
-          {props.numberOfExercises2}{" "}
-        </p>
-        <p>
-          Name of part: {props.part3} - Number of exercises:{" "}
-          {props.numberOfExercises3}{" "}
-        </p>
+      </>
+    );
+  };
+  const Content = (props) => {
+    return (
+      <>
+        <div>
+          <Part part={props.part1} numberOfExercises={exercises1} />
+          <Part part={props.part2} numberOfExercises={exercises2} />
+          <Part part={props.part3} numberOfExercises={exercises3} />
+        </div>
       </>
     );
   };
@@ -43,17 +47,6 @@ const App = () => {
 
   return (
     <div>
-      {/* <h1>{course}</h1>
-      <p>
-        {part1} {exercises1}
-      </p>
-      <p>
-        {part2} {exercises2}
-      </p>
-      <p>
-        {part3} {exercises3}
-      </p>
-      <p>Number of exercises {exercises1 + exercises2 + exercises3}</p> */}
       <Header course="Half Stack application development" />
       <br />
       <br />
