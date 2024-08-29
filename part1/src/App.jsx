@@ -1,3 +1,5 @@
+import Dreamcomponent from "./pages/Dreamcomponent";
+
 const Hello = ({ name, age }) => {
   console.log(name, age);
 
@@ -14,11 +16,15 @@ const App = () => {
   const name = "Peter";
   const age = 10;
   return (
-    <div>
+    <>
       <h1>Grettings</h1>
       <Hello name="Maya" age={36} />
       <Hello name={name} age={age} />
-    </div>
+      <br />
+      <br />
+      <br />
+      <Dreamcomponent />
+    </>
   );
 };
 
