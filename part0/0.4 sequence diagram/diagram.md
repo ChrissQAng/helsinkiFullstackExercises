@@ -1,17 +1,6 @@
-Sequence Diagram for posting a new note:
-
-ls
-Sequence Diagram for posting a new note:
-
 sequenceDiagram
 participant browser
 participant server
-
-    browser->>server: POST
-    https://studies.cs.helsinki.fi/exampleapp/new_note
-    activate server
-    server--<<browser: text/html; charset=utf-8
-    deactivate server
 
     browser->>server: GET https://studies.cs.helsinki.fi/exampleapp/notes
     activate server
